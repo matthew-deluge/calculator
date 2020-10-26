@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(84, 190, 231);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1 {
+    height: 50x;
+    width: 800px;
+    text-align: center;
+}
+#calculator-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    border: 3px solid black;
+    width: 150px;
+    height: 200px;
+    margin: auto;
+    background-color: rgb(14,85,148);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+
+    
+}
+.display {
+    background-color: rgb(184, 184, 184);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-style: solid;
+
+}
+#branding {
+    display: flex;
+    color: white;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    text-align: right;
+    font-weight: bold;
+
+}
+#solar-panel {
+    background-color: gray;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    Padding: 10px;
+    margin-left: 5px;
+    height: 0px;
+    border: 1px solid black;
+}
+.number {
+background-color: rgb(236, 238, 237);
+}
+
+.operator {
+background-color: rgb(215, 47, 60);
+}
+
+.equals {
+background-color:rgb(215, 47, 60);
+}
+
+.clear {
+background-color:rgb(215, 47, 60);
+}
