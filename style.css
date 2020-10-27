@@ -7,19 +7,24 @@ h1 {
     height: 50x;
     width: 800px;
     text-align: center;
+    margin-right:auto;
+    margin-left:auto;
 }
 #calculator-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 30px 40px 40px 40px 40px;
     border: 3px solid black;
-    width: 150px;
-    height: 200px;
-    margin: auto;
+    width: 310px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:50px;
     background-color: rgb(14,85,148);
     grid-row-gap: 10px;
     grid-column-gap: 10px;
-
+    border-radius: 5px;
+    box-shadow: 2px 2px;
     
 }
 .display {
@@ -27,6 +32,14 @@ h1 {
     grid-column-start: 1;
     grid-column-end: 5;
     border-style: solid;
+    text-align:right;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 30px;
+    height: 45px;
+    box-shadow: inset 2px 2px;
 
 }
 #branding {
@@ -35,30 +48,63 @@ h1 {
     grid-column-start: 3;
     grid-column-end: 5;
     text-align: right;
+    text-justify: auto;
     font-weight: bold;
+    font-size: 25px;
+    padding-left:60px;
+    padding-top: 10px;
 
 }
 #solar-panel {
     background-color: gray;
     grid-column-start: 1;
     grid-column-end: 3;
-    Padding: 10px;
     margin-left: 5px;
-    height: 0px;
+    margin-top: 5px;
+    height: 25px;
     border: 1px solid black;
+    text-align: auto;
+    box-shadow: inset 2px 2px;
 }
+
 .number {
 background-color: rgb(236, 238, 237);
+font-size: 20px;
+height:40px;
+margin: 2px;
+box-shadow: 1px 1px;
 }
 
 .operator {
 background-color: rgb(215, 47, 60);
+font-size: 20px;
+height:40px;
+margin:2px;
+box-shadow: 1px 1px;
 }
 
-.equals {
+.equal {
 background-color:rgb(215, 47, 60);
+font-size: 20px;
+grid-row-start: 6;
+grid-row-end:8;
+grid-column-start:4;
+margin:2px;
+box-shadow: 1px 1px;
 }
 
 .clear {
 background-color:rgb(215, 47, 60);
+font-size: 20px;
+height:40px;
+margin: 2px;
+box-shadow: 1px 1px;
+}
+
+.decimal {
+    background-color: rgb(236, 238, 237);
+    font-size: 20px;
+    height:40px; 
+    margin: 2px;
+    box-shadow: 1px 1px;
 }
