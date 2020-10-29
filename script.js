@@ -9,11 +9,13 @@ function subtract(a,b) {
     return a-b;
 }
 function multiply(a,b) {
+    console.log(a);
+    console.log(b);
     return a*b;
 }
 function divide(a,b){//returns an alert if divide by zero, then resets the current Value
     if (b==0) {
-        alert("obey the laws of nature!")
+        updateDisplay("Oh Behave!");
         //return a;
     }
     else {
@@ -44,7 +46,7 @@ function reset() { //sets everything back to the beginning EXCEPT for currentVal
     currentOperator = "";
     operating = false;
 }
-function shorten(value) {
+function shorten(value) { //code to shorten decimals, need to work out the exponential part of it
     if (value.toString().length>10&&value.toString().includes(".")) {
         value =  value.toFixed(6);
     }
@@ -58,12 +60,13 @@ numbers.forEach(button => {button.addEventListener("click", function() { //conne
     if (!operating&&currentValue.toString().length <15) {
         currentValue = Number(currentValue + button.innerHTML);
         updateDisplay(currentValue.toString());
+        console.log(currentValue);
     }
-    else if (operating&&secondValue=="") {
+    else if (operating&&secondValue==="") {
         secondValue = Number(button.innerHTML);
         updateDisplay(secondValue.toString());
     }
-    else if (operating&&!secondValue==""&&secondValue.toString().length<15) {
+    else if (operating&&!secondValue===""&&secondValue.toString().length<15) {
         secondValue = Number(secondValue + button.innerHTML);
         updateDisplay(secondValue);
     }
@@ -78,27 +81,23 @@ operators.forEach(button => { button.addEventListener("click", function() { //ma
     operating = true;
     console.log(currentOperator);
     }
-    if (operating && secondValue=="") {
+    if (operating && secondValue==="") {
         updateDisplay(currentValue)
         currentOperator = button.innerHTML;
     }
-    if (operating && !secondValue=="") {
+    if (operating && !secondValue==="") {
         currentValue = shorten(operate(currentValue, secondValue, currentOperator));
         if (currentValue.toString().length<15) {
         updateDisplay(currentValue);
         currentOperator = button.innerHTML;
         secondValue = "";
         }
-        /*else if (currentValue.toString().length>14) {
-            updateDisplay("ERROR");
-            currentValue="";
-        }*/
     }
 })})
 
 const equalElement = document.querySelector(".equal");
 equalElement.addEventListener("click", function() { //makes the equal sign operate if user has pressed a value, an operator, and a value, else it just waits.
-    if (secondValue == "") {
+    if (secondValue === "") {
         updateDisplay(currentValue);
     }
     else if (!operating) {
@@ -157,7 +156,7 @@ backSpaceElement.addEventListener("click", function() {//deletes the last typed 
         currentValue = 0;
         updateDisplay(currentValue);
     }
-    else if (operating&&!secondValue=="") {
+    else if (operating&&!secondValue==="") {
         secondValue = secondValue.toString();
         secondValue = secondValue.slice(0, secondValue.length - 1);
         secondValue = Number(secondValue);
@@ -184,7 +183,4 @@ document.addEventListener("keyup", function (event) {
         }
            
 })})
-
-//TODO: figure out how to fix issues with numbers that are too large (it eventually displays NaN)
-//TODO: add keyboard functionality
 
