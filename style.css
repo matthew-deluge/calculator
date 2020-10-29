@@ -9,6 +9,22 @@ h1 {
     text-align: center;
     margin-right:auto;
     margin-left:auto;
+    font-family: 'Kanit', sans-serif;
+}
+footer {
+    position: absolute;
+    margin-left: auto;
+    margin-right:auto;
+    bottom:0;
+    width:100%;
+    text-align:center;
+
+
+}
+button {
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    outline: none;
 }
 #calculator-body {
     display: grid;
@@ -24,7 +40,7 @@ h1 {
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     border-radius: 5px;
-    box-shadow: 2px 2px;
+    box-shadow: 4px 4px;
     
 }
 .display {
@@ -40,6 +56,8 @@ h1 {
     font-size: 30px;
     height: 45px;
     box-shadow: inset 2px 2px;
+    overflow:hidden;
+    font-family: monospace;
 
 }
 #branding {
@@ -72,7 +90,6 @@ background-color: rgb(236, 238, 237);
 font-size: 20px;
 height:40px;
 margin: 2px;
-box-shadow: 1px 1px;
 }
 
 .operator {
@@ -80,7 +97,6 @@ background-color: rgb(215, 47, 60);
 font-size: 20px;
 height:40px;
 margin:2px;
-box-shadow: 1px 1px;
 }
 
 .equal {
@@ -90,7 +106,6 @@ grid-row-start: 6;
 grid-row-end:8;
 grid-column-start:4;
 margin:2px;
-box-shadow: 1px 1px;
 }
 
 .clear {
@@ -98,7 +113,6 @@ background-color:rgb(215, 47, 60);
 font-size: 20px;
 height:40px;
 margin: 2px;
-box-shadow: 1px 1px;
 }
 
 .decimal {
@@ -106,5 +120,34 @@ box-shadow: 1px 1px;
     font-size: 20px;
     height:40px; 
     margin: 2px;
-    box-shadow: 1px 1px;
+}
+
+.plus-minus {
+    background-color: rgb(236, 238, 237);
+    font-size: 20px;
+    height:40px; 
+    margin: 2px;
+}
+
+.backspace {
+    background-color: rgb(236, 238, 237);
+    font-size: 20px;
+    height:40px; 
+    margin: 2px;
+}
+button:active {
+    box-shadow: 0px;
+    background-color: rgb(200, 200, 200);
+}
+.clear:active{
+   background-color: rgb(180, 17, 30);
+}
+.backspace:active{
+    background-color: rgb(180, 17, 30);
+}
+.operator:active{
+    background-color: rgb(180, 17, 30);
+}
+.equal:hover{
+    background-color: rgb(180, 17, 30)
 }
